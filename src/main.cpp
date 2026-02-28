@@ -43,7 +43,7 @@ class $modify(MyEffectGameObject, EffectGameObject) {
 	void setIcon(std::string texture){
 		
 		if (CCSprite* newSpr = CCSprite::create(texture.c_str())) {
-			m_hasSpecialChild = true;
+			m_hasCustomChild = true; // m_hasSpecialChild is undeclared?
 			setTexture(newSpr->getTexture());
 			setTextureRect(newSpr->getTextureRect());
 		}
